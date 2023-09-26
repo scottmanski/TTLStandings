@@ -262,7 +262,8 @@ arma::mat getAllCombs(arma::mat W, int total, bool verbose = true) {
                                                                                             c++;
                                                                                             // p.increment();
                                                                                             if (c % 1000000 == 0 && verbose) {
-                                                                                              std::stringstream c;
+                                                                                              std::stringstream strs;
+                                                                                              strs << c;
                                                                                               // std::stringstream strs;
                                                                                               // double remaining = (total-c)*(std::time(&t)-start)/c;
                                                                                               // string timestring = formatTime(remaining);
