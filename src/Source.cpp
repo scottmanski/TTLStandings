@@ -271,7 +271,7 @@ arma::mat getAllCombs(arma::mat W, int total, bool verbose = true) {
 
                                                                                               REprintf("\r");
                                                                                               REprintf("%s", char_type);
-                                                                                              REprintf("\r");
+                                                                                              //REprintf("\r");
                                                                                             }
                                                                                             
                                                                                           }
