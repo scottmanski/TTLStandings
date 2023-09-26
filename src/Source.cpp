@@ -261,17 +261,18 @@ arma::mat getAllCombs(arma::mat W, int total, bool verbose = true) {
                                                                                             //std::this_thread::sleep_for(std::chrono::nanoseconds(1000000));
                                                                                             c++;
                                                                                             // p.increment();
-                                                                                            if (c % 1000000 == 0 && verbose) {
-                                                                                              std::stringstream strs;
-                                                                                              double remaining = (total-c)*(std::time(&t)-start)/c;
-                                                                                              string timestring = formatTime(remaining);
-                                                                                              strs << c; //"Time Remaining: " << timestring;
-                                                                                              std::string temp_str = strs.str();
-                                                                                              char const* char_type = temp_str.c_str();
-
-                                                                                              REprintf("\r");
-                                                                                              REprintf("%s", char_type);
-                                                                                              //REprintf("\r");
+                                                                                            if (c % 200000 == 0 && verbose) {
+                                                                                              warning(std::to_string(c));
+                                                                                            //   std::stringstream strs;
+                                                                                            //   double remaining = (total-c)*(std::time(&t)-start)/c;
+                                                                                            //   string timestring = formatTime(remaining);
+                                                                                            //   strs << c; //"Time Remaining: " << timestring;
+                                                                                            //   std::string temp_str = strs.str();
+                                                                                            //   char const* char_type = temp_str.c_str();
+                                                                                            // 
+                                                                                            //   REprintf("\r");
+                                                                                              // REprintf("%s", char_type);
+                                                                                              // REprintf("\r");
                                                                                             }
                                                                                             
                                                                                           }
