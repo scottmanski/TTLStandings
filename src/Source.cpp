@@ -269,9 +269,9 @@ arma::mat getAllCombs(arma::mat W, int total, bool verbose = true) {
                                                                                               std::string temp_str = strs.str();
                                                                                               char const* char_type = temp_str.c_str();
 
-                                                                                              //REprintf("\r");
+                                                                                              REprintf("\r");
                                                                                               REprintf("%s", char_type);
-                                                                                              //REprintf("\r");
+                                                                                              REprintf("\r");
                                                                                             }
                                                                                             
                                                                                           }
