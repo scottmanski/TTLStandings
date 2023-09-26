@@ -262,16 +262,17 @@ arma::mat getAllCombs(arma::mat W, int total, bool verbose = true) {
                                                                                             c++;
                                                                                             // p.increment();
                                                                                             if (c % 1000000 == 0 && verbose) {
-                                                                                              std::stringstream strs;
-                                                                                              double remaining = (total-c)*(std::time(&t)-start)/c;
-                                                                                              string timestring = formatTime(remaining);
-                                                                                              strs << "Time Remaining: " << timestring;
-                                                                                              std::string temp_str = strs.str();
-                                                                                              char const* char_type = temp_str.c_str();
-
-                                                                                              REprintf("\r");
-                                                                                              REprintf("%s", char_type);
-                                                                                              REprintf("\r");
+                                                                                              std::stringstream c;
+                                                                                              // std::stringstream strs;
+                                                                                              // double remaining = (total-c)*(std::time(&t)-start)/c;
+                                                                                              // string timestring = formatTime(remaining);
+                                                                                              // strs << "Time Remaining: " << timestring;
+                                                                                              // std::string temp_str = strs.str();
+                                                                                              // char const* char_type = temp_str.c_str();
+                                                                                              // 
+                                                                                              // REprintf("\r");
+                                                                                              // REprintf("%s", char_type);
+                                                                                              // REprintf("\r");
                                                                                             }
                                                                                             
                                                                                           }
@@ -319,15 +320,15 @@ arma::mat getAllCombs(arma::mat W, int total, bool verbose = true) {
       }
     }
   }
-  if (verbose) {
-    std::stringstream strs;
-    double remaining = std::time(&t)-start;
-    string timestring = formatTime(remaining);
-    strs << "Total Time: " << timestring;
-    std::string temp_str = strs.str();
-    char const* char_type = temp_str.c_str();
-    Rcout << char_type;
-  }
+  // if (verbose) {
+  //   std::stringstream strs;
+  //   double remaining = std::time(&t)-start;
+  //   string timestring = formatTime(remaining);
+  //   strs << "Total Time: " << timestring;
+  //   std::string temp_str = strs.str();
+  //   char const* char_type = temp_str.c_str();
+  //   Rcout << char_type;
+  // }
   return Standings;
 }
 
