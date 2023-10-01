@@ -22,6 +22,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// getWins2
+arma::vec getWins2(arma::vec PO);
+RcppExport SEXP _TTLStandings_getWins2(SEXP POSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::vec >::type PO(POSEXP);
+    rcpp_result_gen = Rcpp::wrap(getWins2(PO));
+    return rcpp_result_gen;
+END_RCPP
+}
 // getSets
 arma::vec getSets(arma::vec PO);
 RcppExport SEXP _TTLStandings_getSets(SEXP POSEXP) {
@@ -33,6 +44,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// getSets2
+arma::vec getSets2(arma::vec PO);
+RcppExport SEXP _TTLStandings_getSets2(SEXP POSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::vec >::type PO(POSEXP);
+    rcpp_result_gen = Rcpp::wrap(getSets2(PO));
+    return rcpp_result_gen;
+END_RCPP
+}
 // getSetWins
 arma::vec getSetWins(arma::vec PO);
 RcppExport SEXP _TTLStandings_getSetWins(SEXP POSEXP) {
@@ -41,6 +63,17 @@ BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< arma::vec >::type PO(POSEXP);
     rcpp_result_gen = Rcpp::wrap(getSetWins(PO));
+    return rcpp_result_gen;
+END_RCPP
+}
+// getSetWins2
+arma::vec getSetWins2(arma::vec PO);
+RcppExport SEXP _TTLStandings_getSetWins2(SEXP POSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::vec >::type PO(POSEXP);
+    rcpp_result_gen = Rcpp::wrap(getSetWins2(PO));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -64,6 +97,17 @@ BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< arma::vec >::type PO(POSEXP);
     rcpp_result_gen = Rcpp::wrap(getStandings(PO));
+    return rcpp_result_gen;
+END_RCPP
+}
+// getStandings2
+arma::vec getStandings2(arma::vec PO);
+RcppExport SEXP _TTLStandings_getStandings2(SEXP POSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::vec >::type PO(POSEXP);
+    rcpp_result_gen = Rcpp::wrap(getStandings2(PO));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -102,6 +146,19 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// getAllCombs2
+arma::mat getAllCombs2(arma::mat W, int total, bool verbose);
+RcppExport SEXP _TTLStandings_getAllCombs2(SEXP WSEXP, SEXP totalSEXP, SEXP verboseSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::mat >::type W(WSEXP);
+    Rcpp::traits::input_parameter< int >::type total(totalSEXP);
+    Rcpp::traits::input_parameter< bool >::type verbose(verboseSEXP);
+    rcpp_result_gen = Rcpp::wrap(getAllCombs2(W, total, verbose));
+    return rcpp_result_gen;
+END_RCPP
+}
 // rcpp_hello_world
 List rcpp_hello_world();
 RcppExport SEXP _TTLStandings_rcpp_hello_world() {
@@ -115,13 +172,18 @@ END_RCPP
 
 static const R_CallMethodDef CallEntries[] = {
     {"_TTLStandings_getWins", (DL_FUNC) &_TTLStandings_getWins, 1},
+    {"_TTLStandings_getWins2", (DL_FUNC) &_TTLStandings_getWins2, 1},
     {"_TTLStandings_getSets", (DL_FUNC) &_TTLStandings_getSets, 1},
+    {"_TTLStandings_getSets2", (DL_FUNC) &_TTLStandings_getSets2, 1},
     {"_TTLStandings_getSetWins", (DL_FUNC) &_TTLStandings_getSetWins, 1},
+    {"_TTLStandings_getSetWins2", (DL_FUNC) &_TTLStandings_getSetWins2, 1},
     {"_TTLStandings_getOPScores", (DL_FUNC) &_TTLStandings_getOPScores, 2},
     {"_TTLStandings_getStandings", (DL_FUNC) &_TTLStandings_getStandings, 1},
+    {"_TTLStandings_getStandings2", (DL_FUNC) &_TTLStandings_getStandings2, 1},
     {"_TTLStandings_getAllStandings", (DL_FUNC) &_TTLStandings_getAllStandings, 1},
     {"_TTLStandings_formatTime", (DL_FUNC) &_TTLStandings_formatTime, 1},
     {"_TTLStandings_getAllCombs", (DL_FUNC) &_TTLStandings_getAllCombs, 3},
+    {"_TTLStandings_getAllCombs2", (DL_FUNC) &_TTLStandings_getAllCombs2, 3},
     {"_TTLStandings_rcpp_hello_world", (DL_FUNC) &_TTLStandings_rcpp_hello_world, 0},
     {NULL, NULL, 0}
 };

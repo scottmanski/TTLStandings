@@ -5,12 +5,24 @@ getWins <- function(PO) {
     .Call(`_TTLStandings_getWins`, PO)
 }
 
+getWins2 <- function(PO) {
+    .Call(`_TTLStandings_getWins2`, PO)
+}
+
 getSets <- function(PO) {
     .Call(`_TTLStandings_getSets`, PO)
 }
 
+getSets2 <- function(PO) {
+    .Call(`_TTLStandings_getSets2`, PO)
+}
+
 getSetWins <- function(PO) {
     .Call(`_TTLStandings_getSetWins`, PO)
+}
+
+getSetWins2 <- function(PO) {
+    .Call(`_TTLStandings_getSetWins2`, PO)
 }
 
 getOPScores <- function(Sets, Wins) {
@@ -19,6 +31,10 @@ getOPScores <- function(Sets, Wins) {
 
 getStandings <- function(PO) {
     .Call(`_TTLStandings_getStandings`, PO)
+}
+
+getStandings2 <- function(PO) {
+    .Call(`_TTLStandings_getStandings2`, PO)
 }
 
 getAllStandings <- function(PO) {
@@ -31,6 +47,10 @@ formatTime <- function(time) {
 
 getAllCombs <- function(W, total, verbose = TRUE) {
     .Call(`_TTLStandings_getAllCombs`, W, total, verbose)
+}
+
+getAllCombs2 <- function(W, total, verbose = TRUE) {
+    .Call(`_TTLStandings_getAllCombs2`, W, total, verbose)
 }
 
 rcpp_hello_world <- function() {
